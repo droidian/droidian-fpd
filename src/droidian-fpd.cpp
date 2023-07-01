@@ -22,15 +22,15 @@ static void signalHandler(int sig);
 int main(int argc, char **argv)
 {
     QCoreApplication app(argc, argv);
-    QCoreApplication::setOrganizationName("sailfishos");
-    QCoreApplication::setApplicationName("sailfish-fpd-biometryd");
+    QCoreApplication::setOrganizationName("droidian");
+    QCoreApplication::setApplicationName("droidian-fpd");
 
     daemonize();
 
     setlinebuf(stdout);
     setlinebuf(stderr);
 
-    qDebug() << "Starting sailfish-fpd-community daemon";
+    qDebug() << "Starting droidian fingerprint daemon";
 
     qRegisterMetaType<uint32_t>("uint32_t");
 

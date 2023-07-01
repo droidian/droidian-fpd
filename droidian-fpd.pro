@@ -10,29 +10,22 @@
 #   - translation filenames have to be changed
 
 # The name of your application
-TARGET = sailfish-fpd-community
+TARGET = droidian-fpd
 
 QT -= gui
 QT += dbus
 
 LIBS += -lhybris-common
 
-SOURCES += src/sailfish-fpd-community.cpp \
+SOURCES += src/droidian-fpd.cpp \
     src/androidfp.cpp \
     src/fpdcommunity.cpp \
     src/hardware/biometry_fp_api.cpp \
     src/util/property_store.cpp
 
 DISTFILES += \
-    org.sailfishos.fingerprint1.conf \
-    rpm/sailfish-fpd-community.changes.in \
-    rpm/sailfish-fpd-community.changes.run.in \
-    rpm/sailfish-fpd-community.spec \
-    sailfish-fpd-community.service
-
-# to disable building translations every time, comment out the
-# following CONFIG line
-# CONFIG += sailfishapp_i18n
+    org.droidian.fingerprint.conf \
+    droidian-fpd.service
 
 HEADERS += \
     src/androidfp.h \
@@ -43,9 +36,8 @@ HEADERS += \
 
 target.path = /usr/bin/
 
-dbus.files = org.sailfishos.fingerprint1.conf
+dbus.files = org.droidian.fingerprint.conf
 dbus.path = /etc/dbus-1/system.d/
 
 INSTALLS += target \
             dbus
-

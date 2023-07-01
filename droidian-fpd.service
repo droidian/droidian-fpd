@@ -1,0 +1,13 @@
+[Unit]
+Description=Droidian fingerprint daemon
+Requires=lxc@android.service
+After=dbus.socket
+
+[Service]
+Type=dbus
+BusName=org.sailfishos.fingerprint1
+ExecStart=/usr/bin/droidian-fpd
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

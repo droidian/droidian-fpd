@@ -13,7 +13,7 @@
 #include <pwd.h>
 #include <grp.h>
 
-#define FINGERPRINT_PATH "/var/lib/sailfish-fpd-community/"
+#define FINGERPRINT_PATH "/var/lib/droidian-fpd"
 #define FINGERPRINT_FILE "fingerprints.db"
 
 FPDCommunity::FPDCommunity()
@@ -48,21 +48,22 @@ void FPDCommunity::registerDBus()
         qDebug() << "Registering service on dbus" << SERVICE_NAME;
         if (!connection.registerService(SERVICE_NAME))
         {
-            qCritical() << "Didnt register service";
+            QDBusError error = connection.lastError();
+            qCritical() << "Didn't register service. Error:" << error.name() << "-" << error.message();
             QCoreApplication::quit();
             return;
         }
 
-        if (!connection.registerObject("/org/sailfishos/fingerprint1", this, QDBusConnection::ExportAllInvokables | QDBusConnection::ExportAllSignals | QDBusConnection::ExportAllProperties))
+        if (!connection.registerObject("/org/droidian/fingerprint", this, QDBusConnection::ExportAllInvokables | QDBusConnection::ExportAllSignals | QDBusConnection::ExportAllProperties))
         {
-            qCritical() << "Didnt register object"
-                        "";
+            QDBusError error = connection.lastError();
+            qCritical() << "Didn't register object. Error:" << error.name() << "-" << error.message();
             QCoreApplication::quit();
             return;
         }
         m_dbusRegistered = true;
 
-        qInfo() << "Sucessfully registered to dbus systemBus";
+        qInfo() << "Successfully registered to dbus systemBus";
     }
 }
 

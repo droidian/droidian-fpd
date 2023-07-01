@@ -37,9 +37,9 @@ class HIDDEN_SYMBOL Bridge
 {
   public:
     static Bridge<Scope>& instance()
-    { 
-        static Bridge<Scope> bridge; 
-        return bridge; 
+    {
+        static Bridge<Scope> bridge;
+        return bridge;
     }
 
     void* resolve_symbol(const char* symbol, const char* module = "") const

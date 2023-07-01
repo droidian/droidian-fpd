@@ -8,7 +8,7 @@
 
 #include "androidfp.h"
 
-#define SERVICE_NAME "org.sailfishos.fingerprint1"
+#define SERVICE_NAME "org.droidian.fingerprint"
 
 template<typename QEnum>
 QString QtEnumToString (const QEnum value)
