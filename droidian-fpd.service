@@ -6,6 +6,7 @@ After=dbus.socket
 [Service]
 Type=dbus
 BusName=org.droidian.fingerprint
+ExecStartPre=/usr/bin/waitforservice init.svc.vendor.fps_hal*
 ExecStart=/usr/bin/droidian-fpd
 Restart=always
 
