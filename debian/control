@@ -1,0 +1,23 @@
+Source: droidian-fpd
+Section: misc
+Priority: optional
+Maintainer: Bardia Moshiri <fakeshell@bardia.tech>
+Build-Depends: debhelper-compat (= 13),
+               qt5-qmake,
+               qtbase5-gles-dev,
+               qtchooser,
+               libqt5dbus5,
+               libqt5core5a,
+               libqt5dbus5,
+               libqt5network5,
+               android-headers,
+               libhybris-dev,
+               g++,
+               libc6-dev,
+
+Package: droidian-fpd
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends},
+         libgbinder-tools,
+Description: Droidian fingerprint daemon
+  Droidian fingerprint daemon

@@ -1,0 +1,122 @@
+droidian-fpd (0.0.0+git20230702034416.8126064.release) trixie; urgency=medium
+
+  [ Bardia Moshiri ]
+  * adapt to droidian
+  * reflect the dbus change in the systemd service
+  * start the service after fps_hal
+  * use binder-wait and wait on the fingerprint interface
+
+  [ Adam Pigg ]
+  * Initial checkin
+  * Add provides: sailfish-fpd
+  * Add basic enroll implementation
+  * Add basic remove implementation
+  * Add cencel implementation
+  * Add basic authentication implementation
+  * Implement the error callback
+  * Add debugging
+  * Add enumerate implementation
+  * Implement remove_cb
+  * Implement enrollresult_cb
+  * Fix build
+  * Rename FPDBiometryd to FPDCommunity
+  * Implement daemon enroll command
+  * Hook up daemon Itendify
+  * Use Q_FUNC_INFO
+  * Add dbus registration
+  * Add enrollment feedback and clear function
+  * Added enums for states
+  * Implement acquiredinfo handling
+  * Hookup remove signal handling and add some state handling
+  * Make sure to emit removed signal when clearing store
+  * Properly connect the acquired info signals
+  * Connect up authentication signals to daemon
+  * Use the correct object path
+  * Add the GetState method used by mce
+  * Implement a stub GetAll as expected by mce
+  * Add Abort function for dbus
+  * Cleanup project.
+  * Add service files to package
+  * Add stubs for remaining fingerprint API
+  * Add more enums for the API,
+  * Add return types to functions.
+  * When signalling adding a finger, use the name supplied
+  * Get identifying to work
+  * Merge pull request #1 from rinigus/spec
+  * Make IDLE state last action of functions
+  * Use a map to store fingerprin names and id's
+  * Implement save/load of fingerprint names/id's
+  * Emit correct finger name when identified
+  * Immport android supporting code from biometryd
+  * Implement the Remove interface
+  * Add additional return for Identify if no fingers enrolled
+  * Merge pull request #9 from rinigus/consist
+  * Create LICENSE
+  * Create README
+  * Rename README to README.md
+  * Update README.md
+  * Update README.md
+  * .spec improvements
+  * Store fingerprint map in /var/lib not /var/cache.
+  * Merge pull request #15 from piggz/map_location
+  * Merge pull request #14 from piggz/spec_improvements
+  * Merge pull request #12 from rinigus/android-build
+  * Update README.md
+  * Update README.md
+  * Update README.md
+  * Implement Verify()
+  * Merge branch 'master' of github.com:piggz/sailfish-fpd-community
+  * Merge pull request #19 from rinigus/lock2client
+  * Move Clear out of main API
+  * Merge pull request #20 from rinigus/specdep
+  * Merge pull request #21 from rinigus/clear
+  * Merge pull request #22 from rinigus/users
+  * Update release to 1.0
+  * Move the android library instead of copying so that it doesnt get
+  * Add support for packaging fake_crypt which is needed on keymaster 4
+  * Move dake-crypt to seperate package
+  * Add fake_crpyt to readme
+  * Merge pull request #23 from piggz/fake_crypt
+  * Merge pull request #24 from rinigus/fake-path
+  * Update release to 1.1.0 for all packages
+  * Merge pull request #25 from neochapay/master
+  * Merge pull request #30 from piggz/systemd
+  * Revert .pro change as it requires 3.4
+  * Merge pull request #32 from rinigus/cleanup
+  * Merge pull request #33 from neochapay/master
+  * Merge pull request #35 from piggz/aarch64
+  * Update README with new URL and advice for 32/64 bit ports
+
+  [ Matti Lehtimäki ]
+  * Use macros for systemd paths and improve service loading in spec.
+  * Add support for aarch64 userspace.
+
+  [ Chupligin Sergey ]
+  * Fixup requires
+  * [packaging] Install systemd file by rpm
+
+  [ Rinigus ]
+  * add dependencies
+  * cleanup spec
+  * adding support for listing fingerprints
+  * enumerate fingerprints on change
+  * Use graded message handlers for logs
+  * Ensure consistency between Android and Sailfish fingerprint list
+  * Add debug message to verify call
+  * Fix path for Android build
+  * Add scripts for packaging Android library
+  * Cleanup copy script
+  * Ensure that cancel timer is called only if needed
+  * Load fingerprint data only on start
+  * Emit failure signals on errors before switching to idle
+  * Allow to interrupt operations only by a client that started it
+  * Add droid-biometry-fp into dependency of the daemon
+  * Clear fingerprint map on removal of all fingerprints
+  * Keep fingerprint ID while removing it
+  * Introduce user-dependent storage of fingerprint data
+  * Formatting changes
+  * Use /usr/libexec/droid-hybris path for fake-crypt
+  * remove non-needed dependencies
+
+ -- Bardia Moshiri <fakeshell@bardia.tech>  Sun, 02 Jul 2023 03:44:16 +0000
+
