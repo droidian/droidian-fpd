@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Bardia Moshiri <fakeshell@bardia.tech>
 Build-Depends: debhelper-compat (= 13),
                qt5-qmake,
-               qtbase5-gles-dev,
+               qtbase5-dev,
                qtchooser,
                libqt5dbus5,
                libqt5core5a,
