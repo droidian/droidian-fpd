@@ -9,6 +9,7 @@ BusName=org.droidian.fingerprint
 ExecStartPre=/usr/bin/binder-wait android.hardware.biometrics.fingerprint@2.1::IBiometricsFingerprint/default
 ExecStart=/usr/bin/droidian-fpd
 Restart=always
+RestartSec=3
 
 [Install]
 WantedBy=multi-user.target
