@@ -1,10 +1,19 @@
-droidian-fpd (0.0.0+git20230702034416.8126064.release) trixie; urgency=medium
+droidian-fpd (2+git20230726082943.f27f7fa.release) trixie; urgency=medium
+
+  * debian: add a sleep timeout before restarting the service
+
+ -- Bardia Moshiri <fakeshell@bardia.tech>  Wed, 26 Jul 2023 04:29:43 -0400
+
+droidian-fpd (1) trixie; urgency=medium
 
   [ Bardia Moshiri ]
   * adapt to droidian
   * reflect the dbus change in the systemd service
   * start the service after fps_hal
   * use binder-wait and wait on the fingerprint interface
+  * add debian packaging
+  * add circleci configs
+  * debian: replace gles packages with non gles variants
 
   [ Adam Pigg ]
   * Initial checkin
@@ -118,5 +127,5 @@ droidian-fpd (0.0.0+git20230702034416.8126064.release) trixie; urgency=medium
   * Use /usr/libexec/droid-hybris path for fake-crypt
   * remove non-needed dependencies
 
- -- Bardia Moshiri <fakeshell@bardia.tech>  Sun, 02 Jul 2023 03:44:16 +0000
+ -- Bardia Moshiri <fakeshell@bardia.tech>  Sun, 02 Jul 2023 22:43:17 +0000
 

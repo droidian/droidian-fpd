@@ -3,10 +3,5 @@
 %:
 	dh $@
 
-override_dh_auto_configure:
-	qmake droidian-fpd.pro
-	make
-	make clean
-
 override_dh_installsystemd:
 	dh_installsystemd -pdroidian-fpd --name=droidian-fpd droidian-fpd.service --no-start

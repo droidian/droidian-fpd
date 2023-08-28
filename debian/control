@@ -3,12 +3,11 @@ Section: misc
 Priority: optional
 Maintainer: Bardia Moshiri <fakeshell@bardia.tech>
 Build-Depends: debhelper-compat (= 13),
-               qt5-qmake,
+               cmake,
                qtbase5-dev,
                qtchooser,
                libqt5dbus5,
                libqt5core5a,
-               libqt5dbus5,
                libqt5network5,
                android-headers,
                libhybris-dev,
