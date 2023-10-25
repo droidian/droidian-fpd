@@ -4,4 +4,4 @@
 	dh $@
 
 override_dh_installsystemd:
-	dh_installsystemd -pdroidian-fpd --name=droidian-fpd droidian-fpd.service --no-start
+	dh_installsystemd -pdroidian-fpd --name=droidian-fpd droidian-fpd.service
